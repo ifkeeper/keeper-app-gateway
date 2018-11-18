@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mingrn.keeper.gateway.mapper.SysGatewayMapper">
+  <resultMap id="BaseResultMap" type="com.mingrn.keeper.gateway.domain.SysGateway">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="app_name" jdbcType="VARCHAR" property="appName" />
+    <result column="path" jdbcType="VARCHAR" property="path" />
+    <result column="service_id" jdbcType="VARCHAR" property="serviceId" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="retryable" jdbcType="INTEGER" property="retryable" />
+    <result column="strip_prefix" jdbcType="INTEGER" property="stripPrefix" />
+    <result column="custom_sensitive_headers" jdbcType="INTEGER" property="customSensitiveHeaders" />
+    <result column="apply_enable" jdbcType="INTEGER" property="applyEnable" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="deleted" jdbcType="INTEGER" property="deleted" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="description" jdbcType="LONGVARCHAR" property="description" />
+  </resultMap>
+</mapper>
