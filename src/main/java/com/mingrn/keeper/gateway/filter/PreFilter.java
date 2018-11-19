@@ -1,17 +1,13 @@
 package com.mingrn.keeper.gateway.filter;
 
-import com.mingrn.keeper.gateway.enums.FilterTypeEnum;
-import com.mingrn.keeper.global.exception.NotLoginException;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
-import com.sun.org.apache.bcel.internal.generic.ANEWARRAY;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Random;
 import java.util.regex.Pattern;
