@@ -6,7 +6,10 @@ import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +19,10 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import tk.mybatis.spring.mapper.MapperScannerConfigurer;
 
 import javax.sql.DataSource;
+import java.sql.SQLException;
+import java.util.Collections;
 import java.util.Properties;
+import java.util.StringTokenizer;
 
 /**
  * 主数据源配置
@@ -27,6 +33,23 @@ import java.util.Properties;
 @Configuration
 public class MyBatisConfig {
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(MyBatisConfig.class);
+
+	@Value("${spring.datasource.url}")
+	private String dbUrl;
+
+	@Value("${spring.datasource.driver-class-name}")
+	private String dbDriverClassName;
+
+	@Value("${spring.datasource.username}")
+	private String dbName;
+
+	@Value("${spring.datasource.password}")
+	private String dbPassword;
+
+	@Value("${spring.datasource.filters}")
+	private String dbFilters;
+
 	/**
 	 * 数据源
 	 */
@@ -34,7 +57,25 @@ public class MyBatisConfig {
 	@Bean(name = "dataSourceDruid")
 	@ConfigurationProperties("spring.datasource")
 	public DruidDataSource druidDataSource() {
-		return new DruidDataSource();
+		DruidDataSource dataSource = new DruidDataSource();
+		dataSource.setUrl(dbUrl);
+		dataSource.setDriverClassName(dbDriverClassName);
+		dataSource.setUsername(dbName);
+		dataSource.setPassword(dbPassword);
+
+		try {
+			dataSource.setFilters(dbFilters);
+		} catch (SQLException e) {
+			LOGGER.error("druid configuration initialization filter", e);
+		}
+
+
+		// 使用 UTF8mb4 编码集
+		String connectionInitSql = "SET NAMES utf8mb4";
+		StringTokenizer tokenizer = new StringTokenizer(connectionInitSql, ";");
+		dataSource.setConnectionInitSqls(Collections.list(tokenizer));
+
+		return dataSource;
 	}
 
 	/**
