@@ -5,9 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
-import org.springframework.cloud.netflix.zuul.filters.discovery.PatternServiceRouteMapper;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
 @EnableZuulProxy
@@ -15,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableDiscoveryClient
 @SpringBootApplication
 @ComponentScan(basePackages = "com.mingrn.keeper")
-public class Application {
+public class GatewayApplication {
 
 	/**
 	 * 将路由规则进行模式转换,比如服务实例为 userService-v1 则被映射的路径为 v1/userService
@@ -26,6 +24,6 @@ public class Application {
 	}*/
 
 	public static void main(String[] args) {
-		new SpringApplicationBuilder(Application.class).web(WebApplicationType.SERVLET).run(args);
+		new SpringApplicationBuilder(GatewayApplication.class).web(WebApplicationType.SERVLET).run(args);
 	}
 }
