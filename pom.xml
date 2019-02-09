@@ -33,6 +33,12 @@
 			<version>${parent.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>${parent.groupId}</groupId>
+			<artifactId>keeper-utils</artifactId>
+			<version>${parent.version}</version>
+		</dependency>
+
 		<!--Eureka Client-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
