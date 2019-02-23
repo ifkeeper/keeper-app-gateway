@@ -1,70 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<artifactId>keeper-app-gateway</artifactId>
-	<version>${parent.version}</version>
-	<packaging>jar</packaging>
+    <artifactId>keeper-app-gateway</artifactId>
+    <version>${parent.version}</version>
+    <packaging>jar</packaging>
 
-	<parent>
-		<groupId>com.mingrn.keeper</groupId>
-		<artifactId>keeper-parent</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</parent>
+    <parent>
+        <groupId>com.mingrn.keeper</groupId>
+        <artifactId>keeper-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
 
-	<dependencies>
-		<dependency>
-			<groupId>${parent.groupId}</groupId>
-			<artifactId>keeper-global-handler</artifactId>
-			<version>${parent.version}</version>
-		</dependency>
+    <properties>
+        <keeper.mybatis-generator.version>0.0.1-SNAPSHOT</keeper.mybatis-generator.version>
+        <keeper.global-handler.version>0.0.1-SNAPSHOT</keeper.global-handler.version>
+        <keeper.commons-utils.version>0.0.1-SNAPSHOT</keeper.commons-utils.version>
+        <keeper.mybatis-core.version>0.0.1-SNAPSHOT</keeper.mybatis-core.version>
+        <keeper.base.version>0.0.1-SNAPSHOT</keeper.base.version>
+    </properties>
 
-		<dependency>
-			<groupId>${parent.groupId}</groupId>
-			<artifactId>keeper-mybatis-core</artifactId>
-			<version>${parent.version}</version>
-		</dependency>
+    <dependencies>
+        <dependency>
+            <groupId>${parent.groupId}</groupId>
+            <artifactId>keeper-mybatis-generator</artifactId>
+            <version>${keeper.mybatis-generator.version}</version>
+        </dependency>
 
-		<dependency>
-			<groupId>${parent.groupId}</groupId>
-			<artifactId>keeper-base</artifactId>
-			<version>${parent.version}</version>
-		</dependency>
+        <dependency>
+            <groupId>${parent.groupId}</groupId>
+            <artifactId>keeper-global-handler</artifactId>
+            <version>${keeper.global-handler.version}</version>
+        </dependency>
 
-		<dependency>
-			<groupId>${parent.groupId}</groupId>
-			<artifactId>keeper-commons-utils</artifactId>
-			<version>${parent.version}</version>
-		</dependency>
+        <dependency>
+            <groupId>${parent.groupId}</groupId>
+            <artifactId>keeper-mybatis-core</artifactId>
+            <version>${keeper.mybatis-core.version}</version>
+        </dependency>
 
-		<!--Eureka Client-->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>${parent.groupId}</groupId>
+            <artifactId>keeper-base</artifactId>
+            <version>${keeper.base.version}</version>
+        </dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jdbc</artifactId>
-		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>${parent.groupId}</groupId>
+            <artifactId>keeper-commons-utils</artifactId>
+            <version>${keeper.commons-utils.version}</version>
+        </dependency>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<!--必须-->
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+        <!--Eureka Client-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--必须-->
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
