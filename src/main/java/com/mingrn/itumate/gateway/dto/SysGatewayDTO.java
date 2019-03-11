@@ -1,6 +1,6 @@
-package com.mingrn.keeper.gateway.dto;
+package com.mingrn.itumate.gateway.dto;
 
-import com.mingrn.keeper.gateway.domain.SysGateway;
+import com.mingrn.itumate.gateway.domain.SysGateway;
 
 /**
  * 系统网关-DTO数据传输对象类

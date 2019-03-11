@@ -4,53 +4,53 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>keeper-app-gateway</artifactId>
+    <artifactId>itumate-app-gateway</artifactId>
     <version>${parent.version}</version>
     <packaging>jar</packaging>
 
     <parent>
-        <groupId>com.mingrn.keeper</groupId>
-        <artifactId>keeper-parent</artifactId>
+        <groupId>com.mingrn.itumate</groupId>
+        <artifactId>itumate-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <properties>
-        <keeper.mybatis-generator.version>0.0.1-SNAPSHOT</keeper.mybatis-generator.version>
-        <keeper.global-handler.version>0.0.1-SNAPSHOT</keeper.global-handler.version>
-        <keeper.commons-utils.version>0.0.1-SNAPSHOT</keeper.commons-utils.version>
-        <keeper.mybatis-core.version>0.0.1-SNAPSHOT</keeper.mybatis-core.version>
-        <keeper.base.version>0.0.1-SNAPSHOT</keeper.base.version>
+        <itumate.mybatis-generator.version>0.0.1-SNAPSHOT</itumate.mybatis-generator.version>
+        <itumate.global-handler.version>0.0.1-SNAPSHOT</itumate.global-handler.version>
+        <itumate.commons-utils.version>0.0.1-SNAPSHOT</itumate.commons-utils.version>
+        <itumate.mybatis-core.version>0.0.1-SNAPSHOT</itumate.mybatis-core.version>
+        <itumate.base.version>0.0.1-SNAPSHOT</itumate.base.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>${parent.groupId}</groupId>
-            <artifactId>keeper-mybatis-generator</artifactId>
-            <version>${keeper.mybatis-generator.version}</version>
+            <artifactId>itumate-mybatis-generator</artifactId>
+            <version>${itumate.mybatis-generator.version}</version>
         </dependency>
 
         <dependency>
             <groupId>${parent.groupId}</groupId>
-            <artifactId>keeper-global-handler</artifactId>
-            <version>${keeper.global-handler.version}</version>
+            <artifactId>itumate-global-handler</artifactId>
+            <version>${itumate.global-handler.version}</version>
         </dependency>
 
         <dependency>
             <groupId>${parent.groupId}</groupId>
-            <artifactId>keeper-mybatis-core</artifactId>
-            <version>${keeper.mybatis-core.version}</version>
+            <artifactId>itumate-mybatis-core</artifactId>
+            <version>${itumate.mybatis-core.version}</version>
         </dependency>
 
         <dependency>
             <groupId>${parent.groupId}</groupId>
-            <artifactId>keeper-base</artifactId>
-            <version>${keeper.base.version}</version>
+            <artifactId>itumate-base</artifactId>
+            <version>${itumate.base.version}</version>
         </dependency>
 
         <dependency>
             <groupId>${parent.groupId}</groupId>
-            <artifactId>keeper-commons-utils</artifactId>
-            <version>${keeper.commons-utils.version}</version>
+            <artifactId>itumate-commons-utils</artifactId>
+            <version>${itumate.commons-utils.version}</version>
         </dependency>
 
         <!--Eureka Client-->

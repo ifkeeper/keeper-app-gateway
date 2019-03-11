@@ -1,4 +1,4 @@
-package com.mingrn.keeper.gateway.event;
+package com.mingrn.itumate.gateway.event;
 
 import org.springframework.cloud.netflix.zuul.RoutesRefreshedEvent;
 import org.springframework.cloud.netflix.zuul.filters.RouteLocator;

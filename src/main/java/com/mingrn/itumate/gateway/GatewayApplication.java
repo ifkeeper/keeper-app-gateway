@@ -1,4 +1,4 @@
-package com.mingrn.keeper.gateway;
+package com.mingrn.itumate.gateway;
 
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication
-@ComponentScan(basePackages = "com.mingrn.keeper")
+@ComponentScan(basePackages = "com.mingrn.itumate")
 public class GatewayApplication {
 
 	/**

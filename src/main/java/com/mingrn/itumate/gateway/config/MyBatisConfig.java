@@ -1,4 +1,4 @@
-package com.mingrn.keeper.gateway.config;
+package com.mingrn.itumate.gateway.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.github.pagehelper.PageHelper;
@@ -87,7 +87,7 @@ public class MyBatisConfig {
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
 		sqlSessionFactoryBean.setDataSource(dataSource);
 		// 项目domain包路径位置
-		sqlSessionFactoryBean.setTypeAliasesPackage("com.mingrn.keeper.**.domain");
+		sqlSessionFactoryBean.setTypeAliasesPackage("com.mingrn.itumate.**.domain");
 
 		// 配置分页插件，详情请查阅官方文档
 		PageHelper pageHelper = new PageHelper();
@@ -133,7 +133,7 @@ public class MyBatisConfig {
 		MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
 		mapperScannerConfigurer.setSqlSessionTemplateBeanName("sqlSessionTemplate");
 		// 项目Mapper包路径位置
-		mapperScannerConfigurer.setBasePackage("com.mingrn.keeper.**.mapper");
+		mapperScannerConfigurer.setBasePackage("com.mingrn.itumate.**.mapper");
 
 		// 配置通用Mapper，详情请查阅官方文档
 		Properties properties = new Properties();
@@ -146,10 +146,10 @@ public class MyBatisConfig {
 		 * Cause: java.lang.InstantiationException: tk.mybatis.mapper.provider.ConditionProvider
 		 * ----------------------------------------------------------------------------------------------------------
 		 * mappers = 属性名称(固定写法)
-		 * com.mingrn.keeper.core.Mapper = 通用Mapper包路径位置
+		 * com.mingrn.itumate.core.Mapper = 通用Mapper包路径位置
 		 */
-		properties.setProperty("`", "com.mingrn.keeper.core.Mapper");
-		properties.setProperty("mappers", "com.mingrn.keeper.core.Mapper");
+		properties.setProperty("`", "com.mingrn.itumate.core.Mapper");
+		properties.setProperty("mappers", "com.mingrn.itumate.core.Mapper");
 		// insert、update是否判断字符串类型!='' 即 test="str != null"表达式内是否追加 and str != ''
 		properties.setProperty("notEmpty", "false");
 		properties.setProperty("ORDER", "BEFORE");

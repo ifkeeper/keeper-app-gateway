@@ -1,6 +1,6 @@
-package com.mingrn.keeper.gateway.config;
+package com.mingrn.itumate.gateway.config;
 
-import com.mingrn.keeper.gateway.zuul.CustomDynamicRouteLocator;
+import com.mingrn.itumate.gateway.zuul.CustomDynamicRouteLocator;
 import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.cloud.netflix.zuul.filters.ZuulProperties;
 import org.springframework.context.annotation.Bean;

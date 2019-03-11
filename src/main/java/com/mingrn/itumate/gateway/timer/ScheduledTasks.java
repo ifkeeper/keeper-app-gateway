@@ -1,6 +1,6 @@
-package com.mingrn.keeper.gateway.timer;
+package com.mingrn.itumate.gateway.timer;
 
-import com.mingrn.keeper.gateway.event.RefreshRouteService;
+import com.mingrn.itumate.gateway.event.RefreshRouteService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;

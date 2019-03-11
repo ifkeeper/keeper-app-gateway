@@ -1,4 +1,4 @@
-package com.mingrn.keeper.gateway.enums;
+package com.mingrn.itumate.gateway.enums;
 
 /**
  * 请求路由类型枚举类

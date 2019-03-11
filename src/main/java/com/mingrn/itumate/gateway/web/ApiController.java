@@ -1,8 +1,8 @@
-package com.mingrn.keeper.gateway.web;
+package com.mingrn.itumate.gateway.web;
 
-import com.mingrn.keeper.gateway.event.RefreshRouteService;
-import com.mingrn.keeper.global.result.ResponseMsgUtil;
-import com.mingrn.keeper.global.result.Result;
+import com.mingrn.itumate.gateway.event.RefreshRouteService;
+import com.mingrn.itumate.global.result.ResponseMsgUtil;
+import com.mingrn.itumate.global.result.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.cloud.netflix.zuul.web.ZuulHandlerMapping;

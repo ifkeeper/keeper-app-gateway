@@ -1,6 +1,6 @@
-package com.mingrn.keeper.gateway.zuul;
+package com.mingrn.itumate.gateway.zuul;
 
-import com.mingrn.keeper.gateway.domain.SysGateway;
+import com.mingrn.itumate.gateway.domain.SysGateway;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.netflix.zuul.filters.RefreshableRouteLocator;

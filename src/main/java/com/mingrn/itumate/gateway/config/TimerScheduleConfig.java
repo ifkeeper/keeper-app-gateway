@@ -1,4 +1,4 @@
-package com.mingrn.keeper.gateway.config;
+package com.mingrn.itumate.gateway.config;
 
 import org.apache.commons.lang3.concurrent.BasicThreadFactory;
 import org.springframework.context.annotation.Configuration;
